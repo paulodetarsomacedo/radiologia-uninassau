@@ -1,0 +1,8 @@
+{
+  "name":"uninassau-radiologia",
+  "version":"1.0.0",
+  "private":true,
+  "type":"module",
+  "description":"Atlas e laboratório de Radiologia Odontológica UNINASSAU",
+  "engines":{"node":">=22"}
+}
