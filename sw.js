@@ -1,4 +1,4 @@
-const CACHE='uninassau-radio-v1.0.1-anotacoes';
+const CACHE='uninassau-radio-v1.0.2-atlas-workspace';
 const CORE=['./','index.html','style.css','app.js','core.js','imagem.js','image-worker.js','recorte.js','laudo.js','anatomia.js','config.json','manifest.webmanifest','vendor/jspdf.umd.min.js','assets/uninassau.png','assets/crest.png','assets/icon-192.png','assets/icon-512.png',...['maxila-incisivos','maxila-canino','maxila-premolares','maxila-molares','mandibula-incisivos','mandibula-canino','mandibula-premolares','mandibula-molares'].map(x=>'assets/'+x+'.png')];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE)).then(()=>self.skipWaiting()));});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('uninassau-radio-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
